@@ -4,7 +4,7 @@ public class StudentRepository {
 
     private Student[] students;
 
-    public StudentRepository(Student[] students) {
+    public StudentRepository() {
         students = new Student[0];
     }
 
@@ -36,6 +36,37 @@ public class StudentRepository {
         students = tempArray;
 
         return tempArray.length -1;
+    }
+
+    public Student[] getStudent() {
+        return students;
+    }
+
+    public int findStudentByName(String name) {
+        for (int i = 0; i < students.length; i++) {
+            if (students[i] != null) {
+                if (students[i].getName().equals(name)) {
+                    return i;
+                }
+            }
+        }
+        return -1;
+    }
+
+    public Student getStudent(int index){
+        return students[index];
+    }
+
+    public Student removeStudent(int index) {
+        Student student = students[index];
+        students[index] = null;
+        return student;
+    }
+
+    public Student updateStudent(int index, Student updateStudent) {
+        Student student = students[index];
+        student.updateStudent(updateStudent);
+        return student;
     }
 
 }

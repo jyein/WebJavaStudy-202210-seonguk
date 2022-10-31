@@ -15,7 +15,17 @@ public class Student {
         this.kor = kor;
         this.eng = eng;
         this.math = math;
+        calculation();
     }
+
+    public void updateStudent(Student updateStudent) {
+        this.kor = updateStudent.kor;
+        this.eng = updateStudent.eng;
+        this.math = updateStudent.math;
+
+        calculation();
+    }
+
     private void calculation() {
         setTotalScore();
         setAvgScore();
@@ -33,13 +43,13 @@ public class Student {
     public void setGrade() {
         if (avgScore > 89) {
             grade = 'A';
-        }else if (avgScore > 79) {
+        } else if (avgScore > 79) {
             grade = 'B';
-        }else if (avgScore > 69) {
+        } else if (avgScore > 69) {
             grade = 'C';
-        }else if (avgScore > 59) {
+        } else if (avgScore > 59) {
             grade = 'D';
-        }else {
+        } else {
             grade = 'F';
         }
     }
@@ -53,5 +63,10 @@ public class Student {
         System.out.println("학점 : " + grade);
         System.out.println("------------------------");
     }
+
+    public String getName() {
+        return name;
+    }
+
 
 }
