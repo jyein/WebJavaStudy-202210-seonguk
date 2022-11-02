@@ -29,7 +29,7 @@ public class AnimalMain {
         animal2.move();
 
         System.out.println();
-        // 상위 객체에서 하위객체로 형변환
+        // 상위 객체에서 하위객체로 형변환 <다운캐스팅>
         // 명시적 형변환
         System.out.println("<다운캐스팅>");
         Human d_human = (Human) animal1;
