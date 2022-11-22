@@ -7,17 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카카오맵</title>
     <script type="text/javascript"
-        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4724f6f93eba6c3858d7b0cf2a9caad1&libraries=service,clusterer,drawing"></script>
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4724f6f93eba6c3858d7b0cf2a9caad1&libraries=service,clusterer,drawing">
+        </script>
     <link rel="icon" href="/kakaomap/images/favicon.png">
     <link rel="stylesheet" href="/kakaomap/css/map.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- https://map.kakao.com/ -->
 </head>
 
 <body>
     <div id="container">
         <aside>
             <header>
-
+                <div class="title">
+                    <h1 class="title-text">
+                        <i class="fa-solid fa-bars"></i>
+                        <!-- i태그 : 이탤릭체 -->
+                        kakao<span class="map-text">map</span>
+                    </h1>
+                    <div class="check-location">
+                        <input type="checkbox" id="my-location">
+                        <label for="my-location" class="my-location-label">현 지도 내 장소검색</label>
+                    </div>
+                </div>
+                <div class="search">
+                    <input type="text" class="search-input" placeholder="장소, 주소, 버스 검색">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
             </header>
             <ul class="menu">
                 <li><a href="" class="mainmenutap tab-selected">검색</a></li>
@@ -26,12 +45,101 @@
                 <li><a href="" class="mainmenutap">지하철</a></li>
                 <li><a href="" class="mainmenutap">MY</a></li>
             </ul>
+            <div class="report-error">
+
+            </div>
+            <div class="info">
+                <h3 class="title-around">주변 탐색</h3>
+                <ul class="list-around">
+                    <li>
+                        <button class="button-around">
+                            <div class="button-icon"><i class="fa-solid fa-utensils"></i></div>
+                            <span class="button-title">음식점</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="button-around">
+                            <div class="button-icon"><i class="fa-solid fa-utensils"></i></div>
+                            <span class="button-title">음식점</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="button-around">
+                            <div class="button-icon"><i class="fa-solid fa-utensils"></i></div>
+                            <span class="button-title">음식점</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="button-around">
+                            <div class="button-icon"><i class="fa-solid fa-utensils"></i></div>
+                            <span class="button-title">음식점</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="button-around">
+                            <div class="button-icon"><i class="fa-solid fa-utensils"></i></div>
+                            <span class="button-title">음식점</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="button-around">
+                            <div class="button-icon"><i class="fa-solid fa-utensils"></i></div>
+                            <span class="button-title">음식점</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="button-around">
+                            <div class="button-icon"><i class="fa-solid fa-utensils"></i></div>
+                            <span class="button-title">음식점</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </aside>
         <div id="map"></div>
     </div>
 
 
     <script>
+        /*
+        function currentLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(cunction(position) {
+                    var lat = position.coords.latitude;
+                    lon = position.coords.longitude;
+
+                    console.log("위도 : " + lat)
+                    console.log("경도 : " + lon)
+
+                    options = {
+                        center: new kakao.map.LatLng(lat, lon),
+                        level: 3
+                    };
+                    map = new kakao.map.Map(container, options);
+
+                    var container = document.getElementById('map');
+                    var options = {
+                        center: new kakao.maps.LatLng(33.450701, 126.570667),
+                        level: 3
+                    };
+
+                    var map = new kakao.maps.Map(container, options);
+
+                    // 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
+                    var mapTypeControl = new kakao.maps.MapTypeControl();
+
+                    // 지도에 컨트롤을 추가해야 지도위에 표시됩니다
+                    // kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
+                    map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+
+                    // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+                    var zoomControl = new kakao.maps.ZoomControl();
+                    map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+                })
+            }
+        }
+        */
+
         var container = document.getElementById('map');
         var options = {
             center: new kakao.maps.LatLng(33.450701, 126.570667),
