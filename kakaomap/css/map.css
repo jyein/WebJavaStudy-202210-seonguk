@@ -27,9 +27,9 @@ aside {
     left: 0px;
     width: 390px;
     height: 100%;
-    
+
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.23);
-    
+
     background-color: white;
 }
 
@@ -176,7 +176,7 @@ header {
     width: 100%;
 
     background-color: white;
-    
+
     overflow: hidden;
 }
 
@@ -279,10 +279,59 @@ header {
     padding: 25px 26px 0px;
 }
 
-.report-error a {
-    font-size: 10px;
+.reportbug {
+    position: absolute;
+    top: 200px;
+    left: 322px;
+    font-size: 11px;
+    line-height: 13px;
     color: #ccc;
+    cursor: pointer;
+    text-decoration: none;
+}
 
+.info-Air {
+    padding-top: 4px;
+    font-size: 0;
+    line-height: 20px;
+    color: #444;
+}
+
+.txt-air {
+    display: inline-block;
+    font-size: 12px;
+}
+
+.temper {
+    display: inline-block;
+    padding: 0 0 0 6px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #000;
+}
+
+.txt-change {
+    display: inline-block;
+    padding: 0 0 0 8px;
+    font-size: 12px;
+    color: #444;
+}
+
+.txt-bar {
+    margin: 0 8px 0 7px;
+    display: inline-block;
+    height: 10px;
+    width: 1px;
+    background-color: #ccc;
+}
+
+.txt-dust {
+    display: inline-block;
+    font-size: 12px;
+}
+
+.txt-state-density2 {
+    color: green;
 }
 
 
@@ -393,3 +442,132 @@ header {
     border: 1px solid #ccc;
     cursor: pointer;
 } */
+
+/* 즐겨찾기 부분 */
+
+.regfav {
+    width: 100%;
+    height: 143px;
+    background-color: #fff;
+}
+
+.favorite-exposed {
+    padding: 24px 25px 17px 26px;
+    border-top: 1px solid #ffffff90;
+}
+
+.favorite-exposed a {
+    text-decoration: none;
+}
+
+.tit-favorit:hover {
+    text-decoration: underline;
+}
+
+.tit-favorit::after {
+    content: ">";
+    width: 7px;
+    height: 10px;
+    margin-left: 4px;
+    text-decoration: none;
+}
+
+.tit-favorit a {
+    text-decoration: none;
+    color: #000;
+}
+
+.list-registerated {
+    padding-left: 0px;
+    list-style: none;
+    width: 100%;
+    height: 73px;
+    padding-top: 3px;
+}
+
+.list-registerated li {
+    padding-bottom: 8px;
+}
+
+.favorite-list {
+    padding-top: 8px;
+    border-top: 1px solid #ccc;
+}
+
+.icon-personal1 i {
+    width: 20px;
+    height: 20px;
+    padding: 2px 0 0 1px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #ccc;
+    color: white;
+}
+
+.txt-personal {
+    color: #999999;
+}
+
+.txt-personal:hover {
+    text-decoration: underline;
+}
+
+.icon-personal2 i {
+    width: 20px;
+    height: 20px;
+    padding: 2px 0 0 4px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #ccc;
+    color: white;
+}
+
+/* 새로운장소 */
+
+.info-new-place {
+    width: 100%;
+    height: 148px;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.new-place {
+    width: 100%;
+    height: 148px;
+    padding: 24px 26px;
+    border-top: 1px solid #ccc;
+}
+
+.tit-newplace {
+    margin: 0;
+    font-size: 14px;
+}
+
+.desc-newplace {
+    padding-top: 2px;
+    font-size: 12px;
+    color: #888;
+}
+
+.link {
+    display: inline-block;
+    height: 26px;
+
+    margin-top: 12px;
+    padding-left: 9px;
+    padding-right: 9px;
+
+    box-sizing: border-box;
+    font-size: 11px;
+    line-height: 26px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 3px;
+    background-color: #3396FF;
+    color: white;
+    cursor: pointer;
+}
+
